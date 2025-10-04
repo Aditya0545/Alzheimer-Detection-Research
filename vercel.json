@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/health",
+      "dest": "/app/api/health/route.ts"
+    },
+    {
+      "src": "/api/predict",
+      "dest": "/app/api/predict/route.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ]
+}
